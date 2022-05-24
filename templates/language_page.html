@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block style%}
+ <title>{{ language }}</title>
+{% endblock %}
+
+{% block menu %}
+<a href="{% url 'list-page' 'languages' %}" >Language list</a>
+{% endblock %}
+
+{% block content%}
+<h2> {{ language }} countries: </h2>
+
+<ol>
+{% for country in page_obj %}
+    <li><a href="{% url 'country-page' country %}" >{{ country }} </a> </li>
+{% endfor %}
+</ol>
+
+{% include 'inc-paginator.html'%}
+
+{% endblock%}

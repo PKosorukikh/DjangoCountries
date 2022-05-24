@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    a { font-size: 18px;
+    }
+    a:link {
+    color: green;
+    }
+    h1 {
+    color: red;
+    }
+
+    </style>
+
+    {% block style %}
+    {% endblock %}
+
+</head>
+<body>
+<header>
+    <nav><a href="/"> Home page</a> /
+        {% block menu%}
+        {% endblock%}
+    </nav>
+</header>
+
+{% block content%}
+{% endblock%}
+
+<footer>
+
+
+</footer>
+
+</body>
+</html>

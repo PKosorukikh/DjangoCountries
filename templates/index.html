@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block style%}
+ <title>Countries Site</title>
+{% endblock %}
+
+
+{% block menu %}
+<a href="{% url 'list-page' 'countries' %}" >Countries list</a> / <a href="{% url 'list-page' 'languages' %}" >Languages list</a>
+{% endblock %}
+
+{% block content%}
+<h1>Welcome!</h1>
+<h2>It is webiste about countries</h2>
+
+<div>Full list of countries <a href="{% url 'list-page' 'countries' %}">here</a> </div>
+<div>Full list of languages <a href="{% url 'list-page' 'languages' %}">here</a> </div>
+{% endblock %}

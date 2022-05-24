@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block style%}
+ <title>{{ text }} by {{ letter }}</title>
+{% endblock %}
+
+
+{% block menu %}
+<a href="{% url 'list-page' link %}" >{{text}} list</a></nav>
+{% endblock %}
+
+
+{% block content%}
+<h2> {{text}} by {{ letter }}: </h2>
+
+{% for country in page_obj %}
+<a href="{% url page_name country %}">{{ country }}</a><br>
+{% endfor %}
+
+{% include 'inc-paginator.html'%}
+
+{% endblock%}
